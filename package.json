@@ -1,0 +1,47 @@
+{
+	"name": "python-installer-extension",
+	"version": "0.0.15",
+	"publisher": "sap-partner-eng",
+	"license": "MIT",
+	"displayName": "SAP BAS Python Installer",
+	"description": "Python Installer",
+	"engines": {
+		"vscode": "^1.52.0"
+	},
+	"icon": "sap-partner-eng.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/andrewlunde/sap-partner-eng-python-installer-extension"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:python-installer-extension.pythonInstaller"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "python-installer-extension.pythonInstaller",
+				"title": "BAS: Install Python 2.9.0"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.52.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.15.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.1.2",
+		"vscode-test": "^1.4.1"
+	}
+}
